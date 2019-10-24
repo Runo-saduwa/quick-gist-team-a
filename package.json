@@ -1,0 +1,10 @@
+{
+  "name": "quick-gist-scripts",
+  "version": "1.0.0",
+  "description": "Scripts manager for Quick Gist",
+  "scripts": {
+    "client": "npm run start --prefix client"
+  },
+  "author": "Joseph Akayesi",
+  "license": "ISC"
+}
