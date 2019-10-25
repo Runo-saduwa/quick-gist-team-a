@@ -5,6 +5,6 @@
   "scripts": {
     "client": "npm run start --prefix client"
   },
-  "author": "Joseph Akayesi",
+  "author": "Joseph Akayesi and Runo Saduwa",
   "license": "ISC"
 }
