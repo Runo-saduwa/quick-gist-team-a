@@ -8,7 +8,12 @@ QuickGist is a real-time chat application, that allows multiple users join diffe
  * Backend - Express.js Socket.IO, and Node.js 
  * Frontend - React.js
 
+#### How to start server
 
+ * cd into server directory
+ * ```npm install```
+ * ```npm start```
+ 
 #### DOCUMENTATION
 
   ## Backend - 
