@@ -1,0 +1,10 @@
+form fieldset .heading {
+    font-family: 'CircularStd';
+    color: #0b4f6c;
+    font-size: 80px; 
+    font-weight: normal;
+}
+
+.join-input {
+    font-family: 'CircularStd';
+}

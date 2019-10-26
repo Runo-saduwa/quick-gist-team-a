@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "Scripts manager for Quick Gist",
   "scripts": {
-    "client": "npm run start --prefix client"
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Joseph Akayesi and Runo Saduwa",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "nodemon": "^1.19.4"
+  }
 }
