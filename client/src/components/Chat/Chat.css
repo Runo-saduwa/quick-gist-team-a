@@ -3,8 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1A1A1D;
-  }
+    background: rgb(233,132,162);
+    background: linear-gradient(115deg, rgba(233,132,162,0.3) 0%, rgba(185,204,149,0.3) 50%, rgba(248,213,155,0.3) 100%);
+}
   
   .chat-container {
     display: flex;
