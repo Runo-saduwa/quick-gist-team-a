@@ -6,6 +6,8 @@ const server = http.createServer(app);
 const io = socketio(server);
 const {addUser, removeUser, getUser, getUsersRoom} = require('./utils/users')
 const PORT = process.env.PORT || 5000;
+const router = require('./routes');
+
 
 
 
@@ -73,6 +75,10 @@ io.on('connection', (socket) => {
 
 
 })
+
+// Middleware
+app.use(router);
+
 
 server.listen(PORT, () => {
     console.log('Server is Up and running on port ' + PORT);
