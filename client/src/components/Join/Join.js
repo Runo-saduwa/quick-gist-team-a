@@ -30,7 +30,7 @@ const Join = () => {
                                     <input placeholder='Room' type="text" className="form-control" onChange={(event) => setRoom(event.target.value)} />
                                 </div>
                                 <Link onClick={event => checkForValidInput(event)} to={`/chat?name=${name}&room=${room}`}>
-                                    <button type='button' className='btn' id='submit' style={{ backgroundColor: '#0b4f6c', color: '#ffffff', outline: 'none', fontFamily: 'CircularStd' }}>Submit</button>
+                                    <button type='button' className='btn' id='submit' style={{ backgroundColor: '#B9CC95', color: '#ffffff', outline: 'none', fontFamily: 'CircularStd', fontWeight: 500 }}>Submit</button>
                                 </Link>
                             </fieldset>
                         </form>

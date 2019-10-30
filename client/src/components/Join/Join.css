@@ -1,6 +1,6 @@
 form fieldset .heading {
     font-family: 'CircularStd';
-    color: #0b4f6c;
+    color: #B9CC95;
     font-size: 80px; 
     font-weight: normal;
 }
@@ -16,6 +16,7 @@ button#submit.btn:focus {
 
 input.form-control:focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem #0b4f6c70;
-    border-color: #0b4f6c70
+    box-shadow: 0 0 0 0.2rem #B9CC9570;
+    border-color: #B9CC95
 }
+
