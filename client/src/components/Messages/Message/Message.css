@@ -13,6 +13,8 @@
   float: left;
   font-size: 1.1em;
   word-wrap: break-word;
+  margin-top: 0.1px;
+  margin-bottom: 0.1px;
 }
 
 .message-text img {
@@ -58,10 +60,16 @@
   color: #353535;
 }
 
-.background-blue {
+.background-dark {
   background: #2979FF;
 }
 
 .background-light {
   background: #F3F3F3;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .messages {
+    height: 80vh;
+  }
 }

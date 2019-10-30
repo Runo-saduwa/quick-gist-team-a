@@ -28,6 +28,14 @@
       width: 100%;
       height: 100%;
     }
+
+    /* Responsiveness tweaks */
+    .chat-container{
+      width: 100%;
+      height: 100%;
+    }
+    /* End of Responsiveness tweaks */
+
   }
   
   @media (min-width: 480px) and (max-width: 1200px) {

@@ -12,11 +12,9 @@ const Input = ({ message, setMessage, sendMessage }) => {
                 type='text'
                 placeholder='Type a message...'
                 value={message}
-                onChange={event => setMessage(event.target.value)}
+                onChange={({ target: { value } }) => setMessage(value)}
                 onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
             />
-            {/* <button className='send-button' onClick={event => sendMessage(event)}>Send</button> */}
-            {/* <button><img src="./img/google.png" alt="my image" onClick={this.myfunction} /></button> */}
             <button className='btn btn-circle' onClick={event => sendMessage(event)}><FiArrowUp size={30} color='#fff'/></button>
         </form>
     )

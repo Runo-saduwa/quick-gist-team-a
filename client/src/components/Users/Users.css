@@ -1,0 +1,33 @@
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    color: white;
+    height: 60%;
+    justify-content: space-between;
+}
+
+.active-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50%;
+}
+
+.active-item {
+    display: flex;
+    align-items: center;
+}
+
+.active-container img {
+    padding-left: 10px;
+}
+
+.text-container h1 {
+    margin-bottom: 0px;
+}
+  
+@media (min-width: 320px) and (max-width: 1200px) {
+    .text-container {
+        display: none;
+    }
+}
