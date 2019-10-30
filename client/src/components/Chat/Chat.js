@@ -6,6 +6,8 @@ import onlineIcon from '../../assets/icons/onlineIcon.png'
 import closeIcon from '../../assets/icons/closeIcon.png'
 // Components
 import Infobar from '../Infobar/Infobar'
+import Input from '../Input/Input'
+import Messages from '../Messages/Messages'
 
 let socket
 
@@ -54,9 +56,8 @@ const Chat = ({ location }) => {
         <div className='outer-container'>
             <div className='chat-container'>
                 <Infobar room={room} />
-                {/* <input value={message}
-                    onChange={event => setMessage(event.target.value)}
-                    onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null} /> */}
+                <Messages messages={messages} name={name} />
+                <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
             </div>
         </div>
     )
