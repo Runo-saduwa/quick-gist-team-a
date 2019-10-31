@@ -37,8 +37,6 @@ input:focus, textarea:focus, select:focus{
     justify-content: center;
     font-size: 12px;
     line-height: 1.42857;
-    /* background-color: #B9CC95; */
-    /* background-color: #F3F3F3; */
     margin-top: 0.5%;
     margin-bottom: 0.5%;
 }
@@ -47,31 +45,21 @@ input:focus, textarea:focus, select:focus{
     background-color: #F3F3F3;
 }
 
+.inactive:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: none
+}
+
 .active {
     background-color: #B9CC95;
 }
 
-/* .btn-circle.inactive {
-    width: 40px;
-    height: 40px;
-    padding: 6px 0px;
-    border-radius: 20px;
-    text-align: center;
-    justify-content: center;
-    font-size: 12px;
-    line-height: 1.42857;
-    background-color: #000000;
-    margin-top: 0.5%;
-    margin-bottom: 0.5%;
-} */
-
-/* .active {
+.active:focus {
     background-color: #B9CC95;
+    box-shadow: 0 0 0 0.2rem #B9CC9580;
+    border-color: #B9CC95
 }
-
-.inactive {
-    background-color: #000000;
-} */
 
 .border {
     border-radius: 50px;
@@ -86,7 +74,6 @@ input:focus, textarea:focus, select:focus{
         bottom: 0
     }
 }
-
 
 /* Portrait and Landscape */
 @media only screen 
