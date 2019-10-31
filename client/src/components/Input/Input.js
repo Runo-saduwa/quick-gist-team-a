@@ -5,9 +5,6 @@ import './Input.css'
 import { FiArrowUp } from 'react-icons/fi'
 
 const Input = ({ message, setMessage, sendMessage }) => {
-    console.log(message)
-    console.log(message.trim() !== '')
-    console.log(message.trim() === '')
     return (
         <form className='border pl-3 mx-3 my-3'>
             <input
