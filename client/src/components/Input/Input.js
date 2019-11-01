@@ -6,7 +6,7 @@ import { FiArrowUp } from 'react-icons/fi'
 
 const Input = ({ message, setMessage, sendMessage }) => {
     return (
-        <form className='border pl-3 mx-3 my-3'>
+        <form className='border pl-3 mx-3 my-3 d-flex'>
             <input
                 style={{ fontFamily: 'CircularStd' }}
                 className='input'
