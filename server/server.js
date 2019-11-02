@@ -42,16 +42,16 @@ io.on('connection', (socket) => {
   callback();
   })
 
-  socket.on('typing', (typing, callback) => {
+  socket.on('typing', (typing) => {
 
 
     socket.broadcast.emit('typing', typing);
 
    
 
-   callback();
+  // callback();
 
-   
+
   })
 
 

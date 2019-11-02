@@ -59,6 +59,10 @@ const Chat = ({ location }) => {
        
 
         socket.emit('typing', typing, () => setTyping(false))
+       // socket.emit('typing', typing)
+    
+          setTyping(false);
+    
         if (message) {
             socket.emit('sendMessage', message, () => setMessage(''));
 
@@ -67,8 +71,11 @@ const Chat = ({ location }) => {
     }
 
     const onTyping = () => {
+    
         let typing = true;
-        socket.emit('typing', typing, () => setTyping(false))
+      
+        socket.emit('typing', typing, setTyping(false))
+
       
     }
 
