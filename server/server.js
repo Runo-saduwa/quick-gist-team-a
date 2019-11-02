@@ -10,7 +10,6 @@ const PORT = process.env.PORT || 5000;
 const router = require('./routes');
 const filter = new Filter();
 
-
 io.on('connection', (socket) => {
 
 
@@ -37,7 +36,7 @@ io.on('connection', (socket) => {
 
   socket.on('sendMessage', (message, callback) => {
   const user = getUser(socket.id);
-  io.to(user.room).emit('message', {user:user.name, text: message});
+  io.to(user.room).emit('message', {user:user.name, text: filter.clean(message)});
   io.to(user.room).emit('roomData', {room:user.room, users: getUsersRoom(user.room)});
 
   callback();
