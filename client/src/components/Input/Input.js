@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import './Input.css'
 import { FiArrowUp } from 'react-icons/fi'
 
-const Input = ({ message, setMessage, sendMessage }) => {
+const Input = ({ message, setMessage, sendMessage, onTyping }) => {
     return (
         <form className='border pl-3 mx-3 my-3 d-flex'>
             <input
@@ -15,6 +15,9 @@ const Input = ({ message, setMessage, sendMessage }) => {
                 value={message}
                 onChange={({ target: { value } }) => setMessage(value)}
                 onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
+                onKeyDown={onTyping}
+
+              
             />
             <button
                 className={classnames('btn btn-circle', { 'active': message.trim() !== '' }, { 'inactive': message.trim() === '' })}

@@ -16,6 +16,7 @@ const Chat = ({ location }) => {
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('')
     const [messages, setMessages] = useState([])
+    const [typing, setTyping] = useState(false)
     const ENDPOINT = 'localhost:5000'
 
     useEffect(() => {
@@ -38,8 +39,12 @@ const Chat = ({ location }) => {
             setMessages([...messages, message]);
         });
 
+        socket.on('typing', (typing) => {
+            setTyping(typing)
+        })
+
         socket.on('roomData', ({ users }) => {
-            setUsers(users);
+            setUsers(users)
         })
 
         return () => {
@@ -51,18 +56,30 @@ const Chat = ({ location }) => {
 
     const sendMessage = (event) => {
         event.preventDefault();
+       
 
+        socket.emit('typing', typing, () => setTyping(false))
         if (message) {
             socket.emit('sendMessage', message, () => setMessage(''));
+
         }
+       
     }
+
+    const onTyping = () => {
+        let typing = true;
+        socket.emit('typing', typing, () => setTyping(false))
+      
+    }
+
+  
 
     return (
         <div className='outer-container'>
             <div className='chat-container'>
-                <Infobar room={room} />
+                <Infobar room={room} typing={typing}/>
                 <Messages messages={messages} name={name} />
-                <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+                <Input message={message} setMessage={setMessage} sendMessage={sendMessage} onTyping={onTyping}/>
             </div>
             <Users users={users} />
         </div>

@@ -31,3 +31,9 @@
     width: 10px;
     height: 10px;
   }
+
+  .typing-effect {
+    font-size: 0.6rem;
+    font-style: italic;
+    color: darkgray;
+  }
