@@ -4,9 +4,11 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
-const {addUser, removeUser, getUser, getUsersRoom} = require('./utils/users')
+const {addUser, removeUser, getUser, getUsersRoom} = require('./utils/users');
+const Filter = require('bad-words');
 const PORT = process.env.PORT || 5000;
 const router = require('./routes');
+const filter = new Filter();
 
 
 io.on('connection', (socket) => {
