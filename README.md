@@ -10,9 +10,12 @@ QuickGist is a real-time chat application, that allows multiple users join diffe
 
 #### How to start server
 
- * cd into server directory
- * ```npm install```
- * ```npm start```
+ * clone the repo
+ * cd server and type in ```npm install```
+ * cd client and type in ```npm install```
+ * go back to quickgist main directory and type ```npm install```
+ * run ```npm run dev```
+ * go to localhost:3000 to see the project
  
 #### DOCUMENTATION
 
