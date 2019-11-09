@@ -42,7 +42,6 @@ const Join = ({location}) => {
                         <form>
                             <fieldset>
                                 <h1 className='heading'>Join</h1>
-                                <Link className="btn btn-warning" to="/invite">Invite someone</Link>
                                 <div className='form-group mt-5'>
                                     <input placeholder='Name' type="text" className="form-control" onChange={(event) => setName(event.target.value)} />
                                 </div>

@@ -17,7 +17,9 @@ const Chat = ({ location }) => {
     const [message, setMessage] = useState('')
     const [messages, setMessages] = useState([])
     const [typing, setTyping] = useState(false)
+ 
     const ENDPOINT = 'https://quickgist.herokuapp.com/';
+
 
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
