@@ -10,7 +10,7 @@ import Users from '../Users/Users'
 
 let socket
 
-const Chat = ({ location }) => {
+const Chat = ({ location, history }) => {
     const [name, setName] = useState('')
     const [room, setRoom] = useState('')
     const [users, setUsers] = useState('');
@@ -22,6 +22,8 @@ const Chat = ({ location }) => {
 
 
     useEffect(() => {
+       
+
         const { name, room } = queryString.parse(location.search);
 
         socket = io(ENDPOINT);
@@ -35,6 +37,17 @@ const Chat = ({ location }) => {
             }
         });
     }, [ENDPOINT, location.search]);
+
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            socket.emit('disconnect');
+
+            socket.off();
+        }else{
+            history.push('/')
+            window.location.reload();
+        }
+    });
 
     useEffect(() => {
         socket.on('message', (message) => {
@@ -84,7 +97,7 @@ const Chat = ({ location }) => {
   
 
     return (
-        <div className='outer-container'>
+        <div className='outer-container' >
             <div className='chat-container'>
                 <Infobar room={room} typing={typing}/>
                 <Messages messages={messages} name={name} />
