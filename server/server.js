@@ -6,9 +6,16 @@ const server = http.createServer(app);
 const io = socketio(server);
 const {addUser, removeUser, getUser, getUsersRoom} = require('./utils/users');
 const Filter = require('bad-words');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 const router = require('./routes');
 const filter = new Filter();
+const cors = require('cors');
+const bodyParser = require('body-parser');
+//sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+
+
+
 
 io.on('connection', (socket) => {
 
@@ -78,7 +85,25 @@ io.on('connection', (socket) => {
 
 
 // Middleware
+
+//app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
+
+
+// var allowCrossDomain = function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*"); // allow requests from any other server
+//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'); // allow these verbs
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Cache-Control");
+//   next();
+// }
+ // app.use(allowCrossDomain)
+
+
 app.use(router);
+app.use(cors())
 
 
 server.listen(PORT, () => {
