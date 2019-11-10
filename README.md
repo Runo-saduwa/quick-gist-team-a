@@ -1,15 +1,13 @@
-### QuickGist - Real-time multiuser Chat Application
+#
 
-#### Description:
+# QuickGist Web Forum
 
-QuickGist is a real-time chat application, that allows multiple users join different chat rooms to interact about a random topic.
+QuickGist is a web based chat application which allows unique users to join a chat room/group
+and chat/discuss about random topics in real-time. QuickGist allows users connect with ease because there is no authentication built into the application, all that is required to join a group is a unique username. 
 
-#### Technologies:
- * Backend - Express.js Socket.IO, and Node.js 
- * Frontend - React.js
-
-#### How to start server
-
+<<<<<<< HEAD
+The focus of the application is to allow users to engage in "quick" discussions in a modest and decent manner, hence, foul languages or profane words are censored.
+=======
  * clone the repo
  * cd server and type in ```npm install```
  * cd client and type in ```npm install```
@@ -18,21 +16,45 @@ QuickGist is a real-time chat application, that allows multiple users join diffe
  * go to localhost:3000 to see the project
  
 #### DOCUMENTATION
+>>>>>>> a0b91bf4e1401c05d92da941680c96d745ebbe8d
 
-  ## Backend - 
-     * Event - 'join' - listens for 'join' from the client
-       response emitted - The client emits an object with 'name and room' properties  in the following format:
+QuickGist is a single-page application (SPA), it was developed with some of the most popular web technologies on the web.
 
-       ```{
-           name: 'name',
-           room: 'room
-         } ```
-         
-     * Event - 'sendMessage' - listens for 'sendMessage' event from the client
-       response emitted - this event expects to recieve a string, 'message' in the following format:
-       ```
-       STRING message 
-        ```
+
+
+## Getting Started
+
+- Fork or directly clone this repository to your local machine
+- Use the `npm install` command to install dependencies in the `/quickgist` directory which include:
+ - `concurrently`
+ - `nodemon`
+- change directory to `/server` directory and use the `npm install` command to install dependencies which include:
+ - `Express`
+ - `Socket.IO`
+ - `CORS`
+ - `bad-words`
+- change directory to `/client` directory and use the `npm install` command to install dependencies.
+ - `React`
+ - `socket.io-client`
+ - `react-icons`
+ - etc
+- Once the dependencies are finished installing, change directory back to the root directory
+`/quickgist` and use the `npm run dev` command to open the app in your local browser of choice
+
+
+## Built With
+
+- [Node.JS](https://nodejs.org/)
+- [React](https://reactjs.org/)
+- [ExpressJS](https://expressjs.org/)
+- [Socket.IO](https://expressjs.org/)
+
+
+## Authors
+
+- [Runo Saduwa](https://github.com/)
+- [Joseph Akayesi](https://github.com/)
+
 
 
 
