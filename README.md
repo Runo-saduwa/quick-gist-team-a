@@ -48,7 +48,7 @@ QuickGist is a single-page application (SPA), it was developed with some of the 
 ## Authors
 
 - [Runo Saduwa](https://github.com/Runo-saduwa)
-- [Joseph Akayesi](https://github.com/)
+- [Joseph Akayesi](https://github.com/JosephAkayesi)
 
 
 
