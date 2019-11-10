@@ -1,23 +1,11 @@
-#
 
 # QuickGist Web Forum
 
 QuickGist is a web based chat application which allows unique users to join a chat room/group
 and chat/discuss about random topics in real-time. QuickGist allows users connect with ease because there is no authentication built into the application, all that is required to join a group is a unique username. 
 
-<<<<<<< HEAD
 The focus of the application is to allow users to engage in "quick" discussions in a modest and decent manner, hence, foul languages or profane words are censored.
-=======
- * clone the repo
- * cd server and type in ```npm install```
- * cd client and type in ```npm install```
- * go back to quickgist main directory and type ```npm install```
- * run ```npm run dev```
- * go to localhost:3000 to see the project
  
-#### DOCUMENTATION
->>>>>>> a0b91bf4e1401c05d92da941680c96d745ebbe8d
-
 QuickGist is a single-page application (SPA), it was developed with some of the most popular web technologies on the web.
 
 
@@ -26,8 +14,8 @@ QuickGist is a single-page application (SPA), it was developed with some of the 
 
 - Fork or directly clone this repository to your local machine
 - Use the `npm install` command to install dependencies in the `/quickgist` directory which include:
- - `concurrently`
- - `nodemon`
+  - `concurrently`
+  - `nodemon`
 - change directory to `/server` directory and use the `npm install` command to install dependencies which include:
  - `Express`
  - `Socket.IO`
